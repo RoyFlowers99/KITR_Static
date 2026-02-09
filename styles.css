@@ -1,0 +1,148 @@
+:root {
+  --mc-blue: #0077c4; 
+  --mc-gold: #ffbf00;
+}
+
+/* Font src attributes may need to be reworked for a linux env */
+
+@font-face {
+  font-family: 'Inter';
+  src: url('fonts\\inter-v20-latin-500.woff2') format('woff2');
+  font-display: swap; /* Helps optimize font loading */
+}
+
+@font-face {
+  font-family: 'Archivo Black';
+  src: url('fonts\\archivo-black-v23-latin-regular.woff2') format('woff2');
+  font-display: swap;
+}
+
+html, body {
+  height: 100%;
+  margin: 0px;
+}
+
+body {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+header > div > a {
+  color: black;
+}
+
+h1, strong {
+  font-family: "Archivo Black";
+}
+
+/* BEGIN HEADER */
+
+header {
+  max-width: 100vw;
+  display: flex;
+  flex-direction: column;
+}
+
+#call-sticky {
+  background-color: var(--mc-gold);
+  height: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Inter';
+  font-size: 1.5rem;
+}
+
+.header-lower {
+  max-width: 100%;
+  justify-content: space-between;
+  background-color: var(--mc-blue);
+  color: white;
+  display: flex;
+  padding: 1rem;
+  align-items: center;
+}
+.header-lower > h1 {
+  font-size: 1.5rem;
+}
+
+/* BEGIN MAIN */
+
+main {
+  padding: 1rem;
+  background-color: #f1f1f1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 0;
+}
+
+main > strong {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.main-internal-wrapper {
+  background-color: white;
+  border-radius: 3rem;
+  flex: 1;
+  width: 95%;
+  margin: 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  box-shadow:
+    -3px -10px 15px #ffffff,
+    -3px -5px 8px #ffffff,
+    -10px 0px 15px #ffffff,
+    3px 10px 12px rgba(0, 0, 0, 0.2);
+}
+
+.main-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  
+  flex: 1;
+  border-radius: 3rem;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+.option {
+  flex: 1;
+  background-color: red;
+  height: 5rem;
+}
+
+/* BEGIN FOOTER */
+
+footer {
+  color: white;
+  background-color: var(--mc-blue);
+  font-family: "Inter";
+  padding: 1rem;
+}
+
+footer > p, h1 {
+  margin: 0px;
+}
+
+.footer-nap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0px 0px 1rem 0px;
+}
+
+.footer-nap > h1 {
+  font-size: 1rem;
+}
+
+.footer-nap > div {
+  text-align: right;
+  font-size: 1rem;
+}
+
+.footer-nap > div > a {
+  color: white;
+}
