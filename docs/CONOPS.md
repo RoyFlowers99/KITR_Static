@@ -7,7 +7,9 @@
 ---
 
 ## 1) Purpose
-Provide a fast, low-attack-surface, mobile-first public website that (1) markets Keene IT & Repair services and (2) captures quote requests via a simple form/funnel, delivering those requests to me via email. The system must remain low-cost, low-maintenance, and resilient.
+Provide a fast, low-attack-surface, mobile-first public website that 
+  (1) markets Keene IT & Repair services and 
+  (2) captures quote requests via a simple form/funnel, delivering those requests to me via email. The system must remain low-cost, low-maintenance, and resilient.
 
 ---
 
