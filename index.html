@@ -65,8 +65,11 @@
     <main>
       <strong>Let's fix your issue.<br>What are you having trouble with?</strong>
       <div class="main-internal-wrapper">
-        <template id="main-content-template">
-          <div id="YourDevice" class="option">
+        <div id="mount" class="main-content"></div>
+
+        <!--TEMPLATE HOME-->
+        <template id="tpl-home">
+          <div id="YourDevice" class="option" data-set="category" data-next="device" data-value="device">
             <p>
               Your Device
             </p>
@@ -76,7 +79,7 @@
             </svg>
           </div>
 
-          <div id="YourNetwork" class="option">
+          <div id="YourNetwork" class="option" data-set="category" data-next="network" data-value="network">
             <p>
               Your Network
             </p>
@@ -86,7 +89,7 @@
             </svg>
           </div>
 
-          <div id="SomethingElse" class="option">
+          <div id="SomethingElse" class="option" data-set="category" data-next="other" data-value="other">
             <p>
               Something Else
             </p>
@@ -96,7 +99,34 @@
             </svg>
           </div>
         </template>
-        <div id="mount" class="main-content"></div>
+
+        <!--TEMPLATE DEVICE-->
+        <template id="tpl-device">
+          <div class="view">
+            <h2>Device Help</h2>
+            <p>Pick a device issue.</p>
+            <button class="back" data-next="home">Back</button>
+          </div>
+        </template>
+
+        <!--TEMPLATE DEVICE-->
+        <template id="tpl-network">
+          <div class="view">
+            <h2>Network Help</h2>
+            <p>Pick a network issue.</p>
+            <button class="back" data-next="home">Back</button>
+          </div>
+        </template>
+
+        <!--TEMPLATE OTHER-->
+        <template id="tpl-other">
+          <div class="view">
+            <h2>Something Else</h2>
+            <p>Tell me what’s going on.</p>
+            <button class="back" data-next="home">Back</button>
+          </div>
+        </template>
+
       </div>
     </main>
     <footer>
