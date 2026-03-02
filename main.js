@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   const mount = document.getElementById("mount");
   if (!mount) return;
+  
 
   const state = {
     selected: {
@@ -10,6 +11,11 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     view: "home"
   };
+
+  function capitalize(string) {
+    if (!string) return string;
+    return string.charAt(0).toUpperCase() + string.slice(1);
+  }
 
   function resetBelow(key) {
     const order = ["category", "subcategory", "issue"];
@@ -64,13 +70,23 @@ document.addEventListener("DOMContentLoaded", () => {
       setSelected(key, value);
     }
 
-    render(next);
+    render(next)
+
+    if (next === "contact" && state.selected.category) {
+      const contactMount = document.getElementById("contactMount");
+      const categoryEl = document.createElement("p");
+      if (state.selected.category === "device") { 
+        categoryEl.textContent = `${capitalize(state.selected.category)}: ${capitalize(state.selected.subcategory)}` 
+      } else {
+        categoryEl.textContent = `${capitalize(state.selected.category)}`
+      };
+      contactMount.append(categoryEl);
+    } 
+
     console.log(state);
   });
 
   render("home");
-
-  window.__KITR_STATE__ = state;
 
   const FooterSpan = document.getElementById("footer-span");
   FooterSpan.innerText = `${new Date().getFullYear()}`;

@@ -221,7 +221,7 @@
               <p>Pick a network issue.</p>
             </div>
           </div>
-          <div id="SomethingElse" class="option" data-set="category" data-next="contact" data-value="other">
+          <div id="network1" class="option" data-set="category" data-next="contact" data-value="network">
               <p>
                 Test
               </p>
@@ -235,12 +235,20 @@
         <!--TEMPLATE CONTACT-->
         <template id="tpl-contact">
           <div class="view">
-            <button class="back" data-next="home">Back</button>
+            <button class="back" data-next="home">Restart</button>
             <div class="view-title">
               <h2>Contact</h2>
-              <p>What's wrong?</p>
+              <p>Request a Quote.</p>
             </div>
           </div>
+          <div id="contactMount"></div>
+          <div>
+            form info<br>
+            name<br>
+            phone<br>
+            email<br>
+          </div>
+          <button type="submit">Submit</button>
         </template>
 
       </div>
