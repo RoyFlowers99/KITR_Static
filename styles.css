@@ -108,12 +108,38 @@ main > strong {
 }
 
 .main-content {
+  font-family: 'Inter';
+  font-size: 1.5rem;
   display: grid;
   grid-template-rows: 1fr 1fr 1fr;
   flex: 1;
   border-radius: 3rem;
   padding: 1rem;
   gap: 1rem;
+}
+
+.view {
+  display: grid;
+  grid-template-columns: auto auto;
+  text-align: right;
+}
+
+.view-title > h2, p {
+  margin: 0;
+}
+
+.back {
+  border-radius: 1em;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  box-shadow:
+    -3px -10px 15px #ffffff,
+    -3px -5px 8px #ffffff,
+    -10px 0px 15px #ffffff,
+    3px 10px 12px rgba(0, 0, 0, 0.2);
+  height: 5rem;
+  font-size: 1.5rem;
+  font-family: 'Inter';
+  background-image: linear-gradient(135deg, #ebebeb, #ffffff);
 }
 
 .option {
@@ -127,10 +153,9 @@ main > strong {
     -3px -5px 8px #ffffff,
     -10px 0px 15px #ffffff,
     3px 10px 12px rgba(0, 0, 0, 0.2);
+  background-image: linear-gradient(135deg, #ebebeb, #ffffff);
   flex: 1;
   height: 5rem;
-  font-family: 'Inter';
-  font-size: 1.5rem;
   padding: 0px 1rem;
 }
 
