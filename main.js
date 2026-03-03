@@ -73,14 +73,21 @@ document.addEventListener("DOMContentLoaded", () => {
     render(next)
 
     if (next === "contact" && state.selected.category) {
-      const contactMount = document.getElementById("contactMount");
+      const contactCategoryMount = document.getElementById("contactCategoryMount");
+      const contactIssueMount = document.getElementById("contactIssueMount");
       const categoryEl = document.createElement("p");
+      const issueEl = document.createElement("p");
+
       if (state.selected.category === "device") { 
         categoryEl.textContent = `${capitalize(state.selected.category)}: ${capitalize(state.selected.subcategory)}` 
       } else {
         categoryEl.textContent = `${capitalize(state.selected.category)}`
       };
-      contactMount.append(categoryEl);
+
+      issueEl.textContent = `Issue: ${capitalize(state.selected.issue)}`
+
+      contactCategoryMount.append(categoryEl);
+      contactIssueMount.append(issueEl);
     } 
 
     console.log(state);

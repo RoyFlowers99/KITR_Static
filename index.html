@@ -6,6 +6,10 @@
     <meta name="description" content="Computer repair and IT support in Hamilton, Ohio. Virus removal, WiFi troubleshooting, and small business network services.">
     <title>Keene IT & Repair</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/favicon/site.webmanifest">
     <script src="main.js" defer></script>
     <script type="application/ld+json">
       {
@@ -171,7 +175,7 @@
             </svg>
           </div>
 
-          <div id="issue-networking" class="option" data-set="issue" data-next="contact" data-value="networking issue">
+          <div id="issue-networking" class="option" data-set="issue" data-next="contact" data-value="networking failure">
             <p>
               WiFi / Bluetooth
             </p>
@@ -181,7 +185,7 @@
             </svg>
           </div>
 
-          <div id="issue-malware" class="option" data-set="issue" data-next="contact" data-value="potential malware">
+          <div id="issue-malware" class="option" data-set="issue" data-next="contact" data-value="virus infection">
             <p>
               Virus / Malware
             </p>
@@ -239,10 +243,13 @@
             <button class="back" data-next="home">Restart</button>
             <div class="view-title">
               <h2>Contact</h2>
-              <p>Request a Quote.</p>
+              <p>Get a Quote.</p>
             </div>
           </div>
-          <div id="contactMount"></div>
+          <hr style="width: 100%;">
+          <div id="contactCategoryMount"></div>
+          <div id="contactIssueMount"></div>
+          <hr style="width: 100%;">
           <div>
             form info<br>
             name<br>
