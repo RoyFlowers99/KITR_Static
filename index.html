@@ -65,21 +65,26 @@
     </script>
   </head>
   <body>
+    <div id="call-sticky"><a href="tel:+15138667570">CALL NOW:&nbsp;(513) 866-7570</a></div> <!-- Yellow Banner -->
     <header>
-      <div id="call-sticky"><a href="tel:+15138667570">CALL:&nbsp;(513) 866-7570</a></div> <!-- Yellow Banner -->
       <div class="header-lower">
-        <h1>KEENE<br>IT & REPAIR</h1>
+        <h1 class="site-title">KEENE<br>IT & REPAIR</h1>
         <svg id="hamburger" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
       </div>
     </header>
     <main>
-      <strong>Let's fix your issue.<br>What are you having trouble with?</strong>
-      <div class="main-internal-wrapper">
+      <strong>Computer Problem?<br>Fast Local Support in Butler County, Ohio.</strong>
+      <br>
+      <strong>Same-Day Service When Available</strong>
+      <section class="main-internal-wrapper">
         <div id="mount" class="main-content"></div>
 
         <!--CATEGORIES-->
         <!--TEMPLATE HOME-->
         <template id="tpl-home">
+          <div class="view-title">
+              <h2>Request a Quote</h2>
+            </div>
           <div id="YourDevice" class="option" data-set="category" data-next="device" data-value="device">
             <p>
               Your Device
@@ -251,10 +256,10 @@
               <p>Get a Quote.</p>
             </div>
           </div>
-          <hr style="width: 100%;">
+          <hr>
           <div id="contactCategoryMount"></div>
           <div id="contactIssueMount"></div>
-          <hr style="width: 100%;">
+          <hr>
           <div>
             form info<br>
             name<br>
@@ -264,11 +269,46 @@
           <button type="submit">Submit</button>
         </template>
 
-      </div>
+      </section>
+      
+      <!--Commons Problems Section-->
+      <section id="common-problems-info">
+        <h2>Common problems I solve:</h2>
+        <ul>
+          <li>Slow computers</li>
+          <li>Virus infections</li>
+          <li>Wi-Fi / networking issues</li>
+          <li>Printer problems</li>
+          <li>Laptop repairs</li>
+          <li>New computer setup</li>
+          <li>Email problems</li>
+          <li>Software support / troubleshooting</li>
+        </ul>
+      </section>
+      
+      <hr>
+
+      <!--Bio Section-->
+      <section id="technician-bio">
+        <h2>Meet Your Local Technician.</h2>
+        <figure>
+          <img src="/images/caleb-keene.webp"
+               alt="Caleb Keene, owner and operator of Keene IT & Repair in Hamilton, Ohio">
+          <figcaption>Caleb Keene - Owner, Keene IT & Repair</figcaption>
+        </figure>
+        <p>
+          Hi, I'm <strong>Caleb</strong>. I run Keene IT & Repair and provide local computer repair 
+          and IT support throughout Butler County.
+        </p>
+        <p>
+          My goal is simple: diagnose the problem, explain the solution clearly, and get your 
+          technology working again without unnecessary hassle or expense.
+        </p>
+      </section>
     </main>
     <footer>
       <div class="footer-nap">
-        <strong>KEENE<br>IT & REPAIR</strong>
+        <strong class="site-title">KEENE<br>IT & REPAIR</strong>
         <div>Computer Repair & IT Support.<br>
            Serving Butler County, Ohio.<br>
            📞 <a href="tel:+15138667570">(513) 866-7570</a><br>
