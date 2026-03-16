@@ -79,7 +79,7 @@ header {
 }
 
 .site-title {
-  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* BEGIN MAIN */
@@ -99,6 +99,7 @@ main > strong {
 }
 
 .main-internal-wrapper {
+  max-width: 1000px;
   padding: 1rem;
   display: flex;
   align-items: center;
@@ -197,16 +198,17 @@ main > strong {
   text-align: center;
 }
 
+#technician-bio > h2, #common-problems-info > h2 {
+  font-size: 2rem;
+}
+
+#technician-bio > p, #common-problems-info > ul {
+  font-size: 1.5rem;
+}
+
 .profile-photo {
   width: 200px;
   height: 200px;
-}
-
-@media (min-width: 500px) {
-  .profile-photo {
-    width: 400px;
-    height: 400px;
-  }
 }
 
 figure {
@@ -252,4 +254,14 @@ footer > p {
 
 .footer-nap > div > a {
   color: white;
+}
+
+@media (min-width: 500px) {
+  .profile-photo {
+    width: 400px;
+    height: 400px;
+  }
+  .site-title {
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.75);
+  }
 }
