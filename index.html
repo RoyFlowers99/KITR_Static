@@ -262,13 +262,37 @@
           <div id="contactCategoryMount"></div>
           <div id="contactIssueMount"></div>
           <hr>
-          <div>
-            Please provide your contact information:<br>
-            name<br>
-            phone<br>
-            email<br>
-          </div>
-          <button type="submit">Submit</button>
+          <form action="/">
+            <p>Please provide your contact information:</p>
+            <br>
+            <label for="name">Name:</label>
+            <input 
+              type="text" 
+              id="client-name" 
+              placeholder="Johnny Appleseed" 
+              name="name"
+              required>
+            <br>
+            <label for="telno">Phone Number:</label>
+            <input 
+              type="tel" 
+              id="client-telno" 
+              name="telno" 
+              placeholder="(513) 123-4567" 
+              pattern="^\(\d{3}\) \d{3}-\d{4}$"
+              maxlength="14"
+              autocomplete="tel"
+              inputmode="tel">
+            <br>
+            <label for="email">Email:</label>
+            <input 
+              type="email" 
+              id="client-email" 
+              placeholder="youremail@example.com" 
+              name="email">
+            <br>
+            <input type="submit">
+          </form>
         </template>
 
       </section>

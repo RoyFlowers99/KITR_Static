@@ -75,6 +75,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (next === "contact" && state.selected.category) {
       const contactCategoryMount = document.getElementById("contactCategoryMount");
       const contactIssueMount = document.getElementById("contactIssueMount");
+      const phoneInput = document.getElementById("client-telno");
       const categoryEl = document.createElement("p");
       const issueEl = document.createElement("p");
 
@@ -88,6 +89,26 @@ document.addEventListener("DOMContentLoaded", () => {
 
       contactCategoryMount.append(categoryEl);
       contactIssueMount.append(issueEl);
+
+      phoneInput.addEventListener("input", (e) => {
+        let digits = e.target.value.replace(/\D/g, "");
+        digits = digits.slice(0, 10);
+        let formatted = "";
+
+        if (digits.length > 0) {
+          formatted += "(" + digits.slice(0, 3);
+        }
+
+        if (digits.length >= 4) {
+          formatted += ") " + digits.slice(3, 6);
+        }
+
+        if (digits.length >= 7) {
+          formatted += "-" + digits.slice(6, 10);
+        }
+
+        e.target.value = formatted;
+      });
     } 
 
     console.log(state);
@@ -103,5 +124,5 @@ document.addEventListener("DOMContentLoaded", () => {
     hamburger.addEventListener("click", () => {
       console.log("all hail the greezy hamburger."); // placeholder
     });
-  }
+  };
 });
