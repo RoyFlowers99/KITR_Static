@@ -190,6 +190,37 @@ main > strong {
   width: 50px;
 }
 
+.quote_input {
+  padding: 10px;
+  border-radius: 1em;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  box-shadow:
+    -3px 0px 8px #ffffff,
+    -10px 0px 15px #ffffff,
+    3px 10px 12px rgba(0, 0, 0, 0.2);
+  background-image: linear-gradient(135deg, #ebebeb, #ffffff);
+}
+
+#submit_button {
+  padding: 10px;
+  border-radius: 1em;
+  width: 100%;
+  font-family: "Inter";
+  font-size: 1.5rem;
+  background-color: #0076c474;
+}
+
+#submit_button:enabled {
+  background-color: #0077c4;
+  color: white;
+  box-shadow: 
+    -3px -10px 15px #ffffff,
+    -3px -5px 8px #ffffff,
+    -10px 0px 15px #ffffff,
+    3px 10px 12px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
 #common-problems-info, #technician-bio {
   font-family: "Inter";
 }

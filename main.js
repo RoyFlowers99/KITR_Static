@@ -75,9 +75,15 @@ document.addEventListener("DOMContentLoaded", () => {
     if (next === "contact" && state.selected.category) {
       const contactCategoryMount = document.getElementById("contactCategoryMount");
       const contactIssueMount = document.getElementById("contactIssueMount");
+      const submitButton = document.getElementById("submit_button");
       const phoneInput = document.getElementById("client-telno");
+      const emailInput = document.getElementById("client-email")
       const categoryEl = document.createElement("p");
       const issueEl = document.createElement("p");
+      const radioCall = document.getElementById("radio_call");
+      const radioText = document.getElementById("radio_text");
+      const radioEmail = document.getElementById("radio_email");
+      let contactSelection;
 
       if (state.selected.category === "device") { 
         categoryEl.textContent = `${capitalize(state.selected.category)}: ${capitalize(state.selected.subcategory)}` 
@@ -108,7 +114,37 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         e.target.value = formatted;
+        enableSubmit();
       });
+
+      emailInput.addEventListener("input", (e) => {
+        enableSubmit();
+      });
+
+      radioCall.addEventListener("input", (e) => {
+        contactSelection = "call";
+        enableSubmit();
+      });
+
+      radioText.addEventListener("input", (e) => {
+        contactSelection = "text";
+        enableSubmit();
+      });
+
+      radioEmail.addEventListener("input", (e) => {
+        contactSelection = "email";
+        enableSubmit();
+      });
+
+      function enableSubmit() {
+        if ((contactSelection === "call" || contactSelection === "text") && phoneInput.value) {
+          submitButton.removeAttribute('disabled');
+        } else if (contactSelection === "email" && emailInput.value) {
+          submitButton.removeAttribute('disabled');
+        } else {
+          submitButton.disabled = true;
+        }
+      }
     } 
 
     console.log(state);
