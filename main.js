@@ -86,12 +86,15 @@ document.addEventListener("DOMContentLoaded", () => {
       let contactSelection;
 
       if (state.selected.category === "device") { 
-        categoryEl.textContent = `${capitalize(state.selected.category)}: ${capitalize(state.selected.subcategory)}` 
+        categoryEl.textContent = `Device: ${capitalize(state.selected.subcategory)}`;
+        issueEl.textContent = `Issue: ${capitalize(state.selected.issue)}`; 
+      } else if (state.selected.category === "network") {
+        categoryEl.textContent = `You're requesting help with your network.`
+        issueEl.textContent = "Let's fix your issue."
       } else {
-        categoryEl.textContent = `${capitalize(state.selected.category)}`
+        categoryEl.textContent = "Let us know more about what you need help with below.";
+        issueEl.textContent = "It will help us give you an accurate quote."
       };
-
-      issueEl.textContent = `Issue: ${capitalize(state.selected.issue)}`
 
       contactCategoryMount.append(categoryEl);
       contactIssueMount.append(issueEl);
