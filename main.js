@@ -148,6 +148,16 @@ document.addEventListener("DOMContentLoaded", () => {
           submitButton.disabled = true;
         }
       }
+
+      document.getElementById("funnel-form").addEventListener("submit", function (e) {
+
+        const hiddenInput = document.createElement("input");
+        hiddenInput.type = "hidden";
+        hiddenInput.name = "metadata";
+        hiddenInput.value = JSON.stringify(state.selected);
+
+        this.appendChild(hiddenInput);
+      });
     } 
 
     console.log(state);
